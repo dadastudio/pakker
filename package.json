@@ -5,8 +5,8 @@
 		"build": "vite build",
 		"dev": "vite",
 		"push": "vite build && git add . && git commit -m 'Stage all changes, commit and push' && git push",
-		"deploy": "ssh pakker 'cd domains/demo.pakker.com && bash deploy.sh'",
-		"ssh": "ssh pakker -t 'cd domains/demo.pakker.com && exec $SHELL -l'"
+		"deploy": "ssh pakker 'cd domains/beta.pakker.com && bash deploy.sh'",
+		"ssh": "ssh pakker -t 'cd domains/beta.pakker.com && exec $SHELL -l'"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.11",
