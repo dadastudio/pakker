@@ -5,6 +5,7 @@
 		"build": "vite build",
 		"dev": "vite",
 		"push": "vite build && git add . && git commit -m 'Stage all changes, commit and push' && git push",
+		"deploy": "ssh -p 10022 pak@dapro25728.serwervps.pl 'cd domains/demo.pakker.com && bash deploy.sh'",
 		"ssh": "ssh -p 10022 pak@dapro25728.serwervps.pl -t 'cd domains/demo.pakker.com && exec $SHELL -l'"
 	},
 	"dependencies": {
