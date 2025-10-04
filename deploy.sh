@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+echo "CLI default php: $(php -v | head -1)"
+echo "Forced PHP_BIN: $($PHP_BIN -v | head -1)"
+
 # === KONFIG ===
 PHP_BIN="/usr/local/php83/bin/php"
 COMPOSER_BIN="$HOME/.local/bin/composer"
-APP_DIR="$HOME/demo.pakker.com"     # <- ścieżka do katalogu projektu
+APP_DIR="$HOME/domains/demo.pakker.com"     # <- ścieżka do katalogu projektu
 BRANCH="main"
 
 cd "$APP_DIR"
@@ -33,7 +36,7 @@ if [ -f artisan ]; then
   # Jeśli używasz kolejek:
   # "$PHP_BIN" artisan queue:restart || true
 
-  # "$PHP_BIN" artisan up || true
+  "$PHP_BIN" artisan up || true
 fi
 
 echo "✅ Deploy OK"
