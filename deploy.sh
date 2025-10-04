@@ -4,7 +4,7 @@ git pull origin main
 if [ -f artisan ]; then
 # /usr/local/php83/bin/php artisan migrate
 
-# /usr/local/php83/bin/php artisan config:clear
+php artisan config:clear
 # /usr/local/php83/bin/php artisan cache:clear
 
 
